@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "0e5ca0d5-ee57-401c-8daf-a756ce56c46c",
+		"name": "PrimeTrade AI Assignment API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50097434",
+		"_collection_link": "https://ashwanisharma6804-7090628.postman.co/workspace/Ashwani-Sharma's-Workspace~439d720f-47ce-4600-810b-74433d64627a/collection/50097434-0e5ca0d5-ee57-401c-8daf-a756ce56c46c?action=share&source=collection_link&creator=50097434"
+	},
+	"item": [
+		{
+			"name": "POST /auth/register",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ashwani\",\r\n    \"email\":\"ashwani@test.com\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-t0VOyaDYUJR2npwJonRFUgWI+2U\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Jan 2026 20:32:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6956d9f6448b6134c419ce65\",\n    \"email\": \"ashwani@test.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "POST /auth/login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ashwani@test.com\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b7-KTwkHLiV8Y4zPjYYv/v6ReFfCoA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Jan 2026 20:34:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTZkOWY2NDQ4YjYxMzRjNDE5Y2U2NSIsImlhdCI6MTc2NzI5OTY5NiwiZXhwIjoxNzY3Mzg2MDk2fQ.tUiblOd0gpeDbrzIn81UzigRJ9eB4MsYIQugo3rfRs0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET /dashboard",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTZkOWY2NDQ4YjYxMzRjNDE5Y2U2NSIsImlhdCI6MTc2NzI5OTY5NiwiZXhwIjoxNzY3Mzg2MDk2fQ.tUiblOd0gpeDbrzIn81UzigRJ9eB4MsYIQugo3rfRs0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/dashboard",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dashboard"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-SQKagcbIT0oCF5HNo26cepJezPI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Jan 2026 20:50:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"This is a protected dashboard route\"\n}"
+				}
+			]
+		}
+	]
+}
